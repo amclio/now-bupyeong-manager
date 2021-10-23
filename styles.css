@@ -30,7 +30,14 @@ button {
 
 /* 5. Grid */
 #container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 210px));
+  grid-template-rows: repeat(3, minmax(auto, 50px));
+  gap: 100px ;
+  margin: 50px;
+
 }
 
 #container > .item {
+ color: gray;
 }
