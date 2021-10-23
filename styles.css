@@ -12,7 +12,7 @@ input {
   height: auto;
   border: 1px solid darkgray;
   border-radius: 2px;
-  font-size: 12px;
+  font-size: 14px;
   outline: none;
 }
 
@@ -22,7 +22,7 @@ textarea {
   height: auto;
   border: 1px solid darkgray;
   border-radius: 2px;
-  font-size: 12px;
+  font-size: 14px;
   resize: none;
   outline: none;
 }
@@ -34,7 +34,7 @@ textarea {
   height: auto;
   border: 1px solid darkgray;
   border-radius: 2px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* 3. 파일 버튼 */
