@@ -7,13 +7,34 @@
 
 /* 2. Input 및 Textarea  */
 input {
+  margin: 5px;
+  width: auto;
+  height: auto;
+  border: 1px solid darkgray;
+  border-radius: 2px;
+  font-size: 14px;
+  outline: none;
 }
 
 textarea {
+  margin: 5px;
+  width: auto;
+  height: auto;
+  border: 1px solid darkgray;
+  border-radius: 2px;
+  font-size: 14px;
+  resize: none;
+  outline: none;
 }
 
 .input label,
 .textarea label {
+  margin: 5px;
+  width: auto;
+  height: auto;
+  border: 1px solid darkgray;
+  border-radius: 2px;
+  font-size: 14px;
 }
 
 /* 3. 파일 버튼 */
