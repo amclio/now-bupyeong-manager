@@ -1,0 +1,36 @@
+/* 1. 제목 및 부제목 */
+.title {
+}
+
+.subtitle {
+}
+
+/* 2. Input 및 Textarea  */
+input {
+}
+
+textarea {
+}
+
+.input label,
+.textarea label {
+}
+
+/* 3. 파일 버튼 */
+input[type='file'] {
+  display: none;
+}
+
+.file-label {
+}
+
+/* 4. 저장버튼 */
+button {
+}
+
+/* 5. Grid */
+#container {
+}
+
+#container > .item {
+}

@@ -1,45 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Now, Bupyeong Management Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Now, Bupyeong Management Tool</title>
-</head>
+  <body>
+    <div class="title">지금, 부평상가 관리툴</div>
+    <div class="subtitle">By CTQ Team</div>
 
-<body>
-  <form>
-    <div>
-      <h1>지금, 부평상가 관리툴</h1>
+    <form>
+      <div id="container">
+        <div class="input item">
+          <label>장소 이름(한국어)</label>
+          <input
+            type="text"
+            id="place_name_kor"
+            name="place_name_kor"
+            class="place_name"
+            size="20"
+          />
+        </div>
 
-      <div>장소 이름(한국어)</div>
-      <input type="text" name="place_name_kor" class="place_name" size="20" />
+        <div class="input item">
+          <label>장소 이름(영어)</label>
+          <input
+            type="text"
+            id="place_name_eng"
+            name="place_name_eng"
+            class="place_name"
+            size="20"
+          />
+        </div>
 
-      <div>장소 이름(영어)</div>
-      <input type="text" name="place_name_eng" class="place_name" size="20" />
+        <div class="input item">
+          <label>GPS 좌표</label>
+          <input type="text" name="GPS_coor" class="gps" size="20" />
+        </div>
 
-      <div>GPS 좌표</div>
-      <input type="text" name="GPS_coor" class="gps" size="20" />
+        <div class="textarea item">
+          <label>장소 설명(한국어)</label>
+          <textarea
+            id="place_explaination_kor"
+            name="place_explaination_kor"
+            class="place_description"
+            rows="5"
+            cols="25"
+          ></textarea>
+        </div>
 
-      <div>장소 설명(한국어)</div>
-      <textarea name="place_explaination_kor" class="place_description" rows="5" cols="25"></textarea>
+        <div class="textarea item">
+          <label>장소 설명(영어)</label>
+          <textarea
+            id="place_explaination_eng"
+            name="place_explaination_eng"
+            class="place_description"
+            rows="5"
+            cols="25"
+          ></textarea>
+        </div>
 
-      <div>장소 설명(영어)</div>
-      <textarea name="place_explaination_eng" class="place_description" rows="5" cols="25"></textarea>
+        <div class="file item">
+          <label class="file-label">
+            <input type="file" name="photo_1" class="file_input" />
+            <span>사진 1</span>
+          </label>
+        </div>
 
-      <div>첨부 사진 1</div>
-      <input type="file" name="photo_1" class="file_input" />
+        <div class="file item">
+          <label class="file-label">
+            <span>사진 2</span>
+            <input type="file" name="photo_2" class="file_input" />
+          </label>
+        </div>
 
-      <div>첨부 사진 2</div>
-      <input type="file" name="photo_2" class="file_input" />
-
-      <div>첨부 사진 3</div>
-      <input type="file" name="photo_3" class="file_input" />
-
-      <div>
-        <input type="submit" class="submit_button">
+        <div class="file item">
+          <label class="file-label">
+            <span>사진 3</span>
+            <input type="file" name="photo_3" class="file_input" />
+          </label>
+        </div>
       </div>
-    </div>
-  </form>
-</body>
-
+      <div>
+        <button class="submit_button" />
+      </div>
+    </form>
+  </body>
 </html>
