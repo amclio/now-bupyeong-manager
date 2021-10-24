@@ -3,11 +3,18 @@
   font-size:3rem;
   font-weight:bold;
   margin: auto;
+  position: static;
+  top: 20xp;
+  margin-left:8px;
+  margin-top:8px;
   width: 100%;
   height: auto;
+  font-size:3rem;
+  font-weight:bold;
 }
 
 .subtitle {
+  margin-left: 25px;
   font-size: 1rem;
   font-weight:  bolder;
   margin: auto;
