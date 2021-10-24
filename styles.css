@@ -1,8 +1,18 @@
 /* 1. 제목 및 부제목 */
 .title {
+  font-size:3rem;
+  font-weight:bold;
+  margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 .subtitle {
+  font-size: 1rem;
+  font-weight:  bolder;
+  margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* 2. Input 및 Textarea  */
