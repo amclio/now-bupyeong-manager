@@ -1,23 +1,23 @@
 /* 1. 제목 및 부제목 */
 .title {
-  font-size:3rem;
-  font-weight:bold;
+  font-size: 3rem;
+  font-weight: bold;
   margin: auto;
   position: static;
   top: 20xp;
-  margin-left:8px;
-  margin-top:8px;
+  margin-top: 30px;
+  margin-left: 30px;
   width: 100%;
   height: auto;
-  font-size:3rem;
-  font-weight:bold;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .subtitle {
-  margin-left: 25px;
+  /* margin-left: 25px; */
   font-size: 1rem;
-  font-weight:  bolder;
-  margin: auto;
+  font-weight: bolder;
+  margin-left: 30px;
   width: 100%;
   height: auto;
 }
@@ -59,11 +59,21 @@ input[type='file'] {
   display: none;
 }
 
+.file.item {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 0.7em;
+}
+
+.file.item .text {
+  color: #868e96;
+}
+
 .file-label {
   display: flex;
   width: 40px;
   height: 40px;
-  margin: 1em;
   justify-content: center;
   align-items: center;
   border: 2px solid #ced4da;
@@ -77,6 +87,18 @@ input[type='file'] {
 
 /* 4. 저장버튼 */
 button {
+  all: unset;
+  padding: 0.5em 1em;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 5em;
 }
 
 /* 5. Grid */
@@ -84,11 +106,10 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 210px));
   grid-template-rows: repeat(3, minmax(auto, 50px));
-  gap: 100px ;
+  gap: 100px;
   margin: 50px;
-
 }
 
 #container > .item {
- color: gray;
+  color: gray;
 }
