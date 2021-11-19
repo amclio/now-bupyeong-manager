@@ -1,8 +1,25 @@
 /* 1. 제목 및 부제목 */
 .title {
+  font-size:3rem;
+  font-weight:bold;
+  margin: auto;
+  position: static;
+  top: 20xp;
+  margin-left:8px;
+  margin-top:8px;
+  width: 100%;
+  height: auto;
+  font-size:3rem;
+  font-weight:bold;
 }
 
 .subtitle {
+  margin-left: 25px;
+  font-size: 1rem;
+  font-weight:  bolder;
+  margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* 2. Input 및 Textarea  */
@@ -64,7 +81,14 @@ button {
 
 /* 5. Grid */
 #container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 210px));
+  grid-template-rows: repeat(3, minmax(auto, 50px));
+  gap: 100px ;
+  margin: 50px;
+
 }
 
 #container > .item {
+ color: gray;
 }
