@@ -43,6 +43,19 @@ input[type='file'] {
 }
 
 .file-label {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 1em;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+}
+
+.file-label > img {
+  width: 50%;
+  height: 50%;
 }
 
 /* 4. 저장버튼 */
