@@ -4,91 +4,97 @@
     <meta charset="utf-8" />
     <title>Now, Bupyeong Management Tool</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
   </head>
 
   <body>
     <div class="title">지금, 부평상가 관리툴</div>
     <div class="subtitle">By CTQ Team</div>
 
-    <form>
-      <div id="container">
-        <div class="input item">
-          <label>장소 이름(한국어)</label>
-          <input
-            type="text"
-            id="place_name_kor"
-            name="place_name_kor"
-            class="place_name"
-            size="20"
-          />
+    <div id="container">
+      <div class="input item">
+        <label>장소 이름(한국어)</label>
+        <input
+          type="text"
+          id="place_name_kor"
+          name="place_name_kor"
+          class="place_name"
+          size="20"
+        />
+      </div>
+
+      <div class="input item">
+        <label>장소 이름(영어)</label>
+        <input
+          type="text"
+          id="place_name_eng"
+          name="place_name_eng"
+          class="place_name"
+          size="20"
+        />
+      </div>
+
+      <div class="input item">
+        <label>GPS 좌표</label>
+        <input
+          type="text"
+          name="GPS_coor"
+          id="GPS_coor"
+          class="gps"
+          size="20"
+        />
+      </div>
+
+      <div class="textarea item">
+        <label>장소 설명(한국어)</label>
+        <textarea
+          id="place_explaination_kor"
+          name="place_explaination_kor"
+          class="place_description"
+          rows="5"
+          cols="25"
+        ></textarea>
+      </div>
+
+      <div class="textarea item">
+        <label>장소 설명(영어)</label>
+        <textarea
+          id="place_explaination_eng"
+          name="place_explaination_eng"
+          class="place_description"
+          rows="5"
+          cols="25"
+        ></textarea>
+      </div>
+      <div>
+        <div class="file item">
+          <label class="file-label">
+            <input type="file" id="photo_1" name="photo_1" class="file_input" />
+            <img src="assets/file-icon.svg" alt="file" />
+          </label>
+          <div class="text">사진 1</div>
         </div>
 
-        <div class="input item">
-          <label>장소 이름(영어)</label>
-          <input
-            type="text"
-            id="place_name_eng"
-            name="place_name_eng"
-            class="place_name"
-            size="20"
-          />
+        <div class="file item">
+          <label class="file-label">
+            <img src="assets/file-icon.svg" alt="file" />
+            <input type="file" id="photo_2" name="photo_2" class="file_input" />
+          </label>
+          <div class="text">사진 2</div>
         </div>
 
-        <div class="input item">
-          <label>GPS 좌표</label>
-          <input type="text" name="GPS_coor" class="gps" size="20" />
-        </div>
-
-        <div class="textarea item">
-          <label>장소 설명(한국어)</label>
-          <textarea
-            id="place_explaination_kor"
-            name="place_explaination_kor"
-            class="place_description"
-            rows="5"
-            cols="25"
-          ></textarea>
-        </div>
-
-        <div class="textarea item">
-          <label>장소 설명(영어)</label>
-          <textarea
-            id="place_explaination_eng"
-            name="place_explaination_eng"
-            class="place_description"
-            rows="5"
-            cols="25"
-          ></textarea>
-        </div>
-        <div>
-          <div class="file item">
-            <label class="file-label">
-              <input type="file" name="photo_1" class="file_input" />
-              <img src="assets/file-icon.svg" alt="file" />
-            </label>
-            <div class="text">사진 1</div>
-          </div>
-
-          <div class="file item">
-            <label class="file-label">
-              <img src="assets/file-icon.svg" alt="file" />
-              <input type="file" name="photo_2" class="file_input" />
-            </label>
-            <div class="text">사진 2</div>
-          </div>
-
-          <div class="file item">
-            <label class="file-label">
-              <img src="assets/file-icon.svg" alt="file" />
-              <input type="file" name="photo_3" class="file_input" />
-            </label>
-            <div class="text">사진 3</div>
-          </div>
+        <div class="file item">
+          <label class="file-label">
+            <img src="assets/file-icon.svg" alt="file" />
+            <input type="file" id="photo_3" name="photo_3" class="file_input" />
+          </label>
+          <div class="text">사진 3</div>
         </div>
       </div>
-      <div class="button-container">
-        <button class="submit_button">저장하기</button>
-      </div>
-    </form>
+    </div>
+    <div class="button-container">
+      <button id="content-submit" class="submit_button">저장하기</button>
+    </div>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
