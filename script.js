@@ -17,7 +17,13 @@ async function addPlaceName(placeId, value, language) {}
 
 // 파라미터: placeId, value (장소 설명), language (언어)
 // 리턴 값 없음
-async function addPlaceDescription(placeId, value, language) {}
+async function addPlaceDescription(placeId, value, language) {
+    const { data, error } =  await supabase
+  .from('test_place_description')
+  .insert([
+    {place_id: placeId, description: value, language: language}
+  ])
+}
 
 // 파라미터: placeId, file (사진 파일)
 // 리턴 값 없음
