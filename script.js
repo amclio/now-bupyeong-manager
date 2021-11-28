@@ -25,9 +25,47 @@ async function addPlaceDescription(placeId, value, language) {
   ])
 }
 
-// 파라미터: placeId, file (사진 파일)
+// 파라미터: placeId
 // 리턴 값 없음
-async function addPlacePhoto(placeId, file) {}
+async function addPlacePhoto(placeId) {
+  const fileFirst = document.getElementById('photo_1').files[0]
+
+  const { data: fileFirstData } = await supabase
+    .storage
+    .from('place.photo')
+    .upload('test/' + placeId + '/1.jpg', fileFirst, {
+      cacheControl: '3600',
+      upsert: false
+  })
+  const fileSecond = document.getElementById('photo_2').files[0]
+
+  const { data: fileSecondData } = await supabase
+    .storage
+    .from('place.photo')
+    .upload('test/' + placeId + '/1.jpg', fileSecond, {
+      cacheControl: '3600',
+      upsert: false
+  })
+  const fileThird = document.getElementById('photo_3').files[0]
+
+  const { data: fileThirdData } = await supabase
+    .storage
+    .from('place.photo')
+    .upload('test/' + placeId + '/3.jpg', fileThird, {
+      cacheControl: '3600',
+      upsert: false
+  })
+
+  const BASE_PHOTO_URL = "https://wgdsxgtlkwalppytthaf.supabase.in/storage/v1/object/public/place.photo"
+
+  const { data, error } = await supabase
+    .from('test_place_photo')
+    .insert([
+      { place_id: placeId, photo_url: BASE_PHOTO_URL + '/test/' + placeId + '/1.jpg' },
+      { place_id: placeId, photo_url: BASE_PHOTO_URL + '/test/' + placeId + '/2.jpg' },
+      { place_id: placeId, photo_url: BASE_PHOTO_URL + '/test/' + placeId + '/3.jpg' }
+    ])
+}
 
 // 파라미터 없음
 // 리턴 값 없음
