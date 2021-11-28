@@ -42,7 +42,7 @@ async function addPlacePhoto(placeId) {
   const { data: fileSecondData } = await supabase
     .storage
     .from('place.photo')
-    .upload('test/' + placeId + '/1.jpg', fileSecond, {
+    .upload('test/' + placeId + '/2.jpg', fileSecond, {
       cacheControl: '3600',
       upsert: false
   })
