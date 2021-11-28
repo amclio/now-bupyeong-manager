@@ -9,7 +9,14 @@ supabase = createClient(API_URL, API_KEY)
 
 // 파라미터: lat, lon (GPS 좌표)
 // 리턴 값: Place ID
-async function addPlace(lat, lon) {}
+async function addPlace(lat, lon) {
+  const { data, error } = await supabase
+  .from('test_place')
+  .insert([
+    { lat: lat, lon: lon, type: "exit"}
+  ])
+  return data[0].id
+}
 
 // 파라미터: placeId, value (장소 이름), language (언어)
 // 리턴 값 없음
